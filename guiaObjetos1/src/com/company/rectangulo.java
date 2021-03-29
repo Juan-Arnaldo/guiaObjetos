@@ -29,16 +29,6 @@ public class rectangulo {
         return (2*base) + (2*alto);
     }
 
-    public void mostrarBase(rectangulo r){
-        System.out.println("Base :" + r.getBase());
-    }
 
-    public void mostrarAltura(rectangulo r){
-        System.out.println("Altura :" + r.getAlto());
-    }
-
-    public void areaYperimetro(rectangulo r){
-        System.out.println("Area: " + r.area() + "\nPerimetro: " + r.perimetro());
-    }
 
 }

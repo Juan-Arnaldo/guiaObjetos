@@ -23,6 +23,7 @@ public class Main {
                     ejer2();
                     break;
                 case 3:
+                    ejer3();
                     break;
                 case 4:
                     break;
@@ -37,29 +38,30 @@ public class Main {
         } while (opc != 0);
     }
 
-
+    //Ejercicio N1
     public static void ejer1(){
         rectangulo r = new rectangulo();
         rectangulo r2 = new rectangulo();
 
         cargarBase(r);
         cargarAltura(r);
-        r.areaYperimetro(r);
+        areaYperimetro(r);
 
         System.out.println("Vamos a modificar los valores de base y altura nuevamente \n");
 
         cargarBase(r);
         cargarAltura(r);
-        r.areaYperimetro(r);
+        areaYperimetro(r);
 
         System.out.println("\nCreamos un nuevo rectangulo y mostramos los valores predeterminados");
 
         System.out.println("\nRectangulo 2 \n");
-        r2.mostrarAltura(r2);
-        r2.mostrarBase(r2);
+        mostrarAltura(r2);
+        mostrarBase(r2);
 
     }
 
+    //Ejercicio N2
     public static void ejer2(){
         empleado p = new empleado();
         empleado p2 = new empleado();
@@ -78,6 +80,21 @@ public class Main {
         p2.mostrarEmpleado(p2);
 
         System.out.println("\nEl salario anual del empleado Gutierrez con un aumento del 15%: " + p.salarioAnual(p.aumentoSalario(p.getSalario(), 15)));
+
+    }
+
+    //Ejercicio N3
+    public static void ejer3(){
+        itemVenta i = new itemVenta();
+
+        i.setId(0);
+        i.setDescripcion("Celular de alta gama");
+        i.setCantidad(2);
+        i.setPrecioUnitario(40000);
+
+        i.mostrarItem(i);
+
+        System.out.println("Precio Final con la compra de 2 items: " + i.precioFinal(i.getCantidad(), i.getPrecioUnitario()));
 
     }
 }
