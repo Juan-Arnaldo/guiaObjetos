@@ -26,6 +26,7 @@ public class Main {
                     ejer3();
                     break;
                 case 4:
+                    ejer4();
                     break;
                 case 5:
                     break;
@@ -96,6 +97,21 @@ public class Main {
 
         System.out.println("Precio Final con la compra de 2 items: " + i.precioFinal(i.getCantidad(), i.getPrecioUnitario()));
 
+    }
+
+    //Ejercicio N4
+    public static void ejer4(){
+        cuentaBanco c = new cuentaBanco();
+
+        c.setId(1);
+        c.setNombre("Prueba");
+        c.setBalance(15000);
+
+        c.setBalance(c.credito(2500, c.getBalance()));
+        c.setBalance(c.debito(1500, c.getBalance()));
+        c.setBalance(c.debito(30000, c.getBalance()));
+
+        c.mostrarCuenta(c);
     }
 }
 
