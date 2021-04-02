@@ -29,6 +29,7 @@ public class Main {
                     ejer4();
                     break;
                 case 5:
+                    ejer5();
                     break;
                 default:
                     System.out.println("La opcion ingresada es incorrecta");
@@ -112,6 +113,42 @@ public class Main {
         c.setBalance(c.debito(30000, c.getBalance()));
 
         c.mostrarCuenta(c);
+    }
+
+    //Ejercicio N5
+    public static void ejer5(){
+        hora h = new hora();
+        Scanner sc = new Scanner(System.in);
+        int aux;
+
+        System.out.println("Ingrese los seg: ");
+        aux = sc.nextInt();
+        if(aux >= 0 && aux < 60 ){
+            h.setSeg(aux);
+        }else{
+            System.out.println("Los seg ingresados son incorrectos");
+        }
+
+        System.out.println("Ingrese los min: ");
+        aux = sc.nextInt();
+        if(aux >= 0 && aux < 60 ){
+            h.setMin(aux);
+        }else{
+            System.out.println("Los min ingresados son incorrectos");
+        }
+
+        System.out.println("Ingrese la hora ");
+        aux = sc.nextInt();
+        if(aux >= 0 && aux < 60 ){
+            h.setHora(aux);
+        }else{
+            System.out.println("La hora ingresada es incorrecta");
+        }
+
+        h.avanzar(h);
+
+        h.mostrarHora(h);
+
     }
 }
 
